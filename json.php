@@ -54,7 +54,7 @@ if ($handle = opendir('./images')) {
         if ($entry != "." && $entry != "..") {
 
             //echo "$entry\n";
-			makeThumbnails("C:/xampp/htdocs/imagesss/images", "C:/xampp/htdocs/imagesss/images/".$entry, $id, $MaxWe=400,$MaxHe=400);
+			//makeThumbnails("C:/xampp/htdocs/imagesss/images", "C:/xampp/htdocs/imagesss/images/".$entry, $id, $MaxWe=400,$MaxHe=400);
 			array_push($images, array("lowsrc"=>"images/".$entry) );
 			 $id++;
         }
