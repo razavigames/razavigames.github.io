@@ -16,18 +16,14 @@
         <link rel="stylesheet" href="css/jquery.galereya.ie.css">
         <![endif]-->
         <style>
-		
 #photos {
-   /* Prevent vertical gaps */
-   line-height: 0;
-   
-   -webkit-column-count: 5;
+   line-height: 0;   
    -webkit-column-gap:   0px;
-   -moz-column-count:    5;
    -moz-column-gap:      0px;
-   column-count:         5;
    column-gap:           4px;
 }
+
+
 
 #photos img,
 #photosWide img,
@@ -40,17 +36,49 @@
 }
 
 
-#photosWide {
-   /* Prevent vertical gaps */
-   line-height: 0;
-   
+	
+#photos {
    -webkit-column-count: 5;
-   -webkit-column-gap:   0px;
    -moz-column-count:    5;
-   -moz-column-gap:      0px;
    column-count:         5;
-   column-gap:           0px;
 }
+#photosWide {
+   -webkit-column-count: 3;
+   -moz-column-count:    3;
+   column-count:         3;
+}
+
+
+@media only screen and (max-width: 1025px) {
+	#photos {
+	   -webkit-column-count: 3;
+	   -moz-column-count:    3;
+	   column-count:         3;
+	}
+	#photosWide {
+	   -webkit-column-count: 2;
+	   -moz-column-count:    2;
+	   column-count:         2;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	#photos {
+	   -webkit-column-count: 1;
+	   -moz-column-count:    1;
+	   column-count:         1;
+	}
+	#photosWide {
+	   -webkit-column-count: 1;
+	   -moz-column-count:    1;
+	   column-count:         1;
+	}
+}
+
+
+
+
+
 
         </style>
 		
@@ -72,7 +100,7 @@
 		</div>
 		
 		
-<div id="photosBilliard">
+<div id="photosWide">
 			
 <img src="images/billiard-android/IMG_20181218_004236.jpg"><img src="images/billiard-android/sc1.jpg"><img src="images/billiard-android/sc4.jpg"><img src="images/billiard-android/sc7.jpg"><img src="images/billiard-android/ScreenShot3.png"><img src="images/billiard-android/ScreenShot5.png"><img src="images/billiard-android/Screenshot_2018-09-30-10-18-06.png"><img src="images/billiard-android/Screenshot_2018-09-30-10-18-17.png"><img src="images/billiard-android/Screenshot_2018-09-30-10-18-45.png"><img src="images/billiard-android/Screenshot_2018-09-30-10-18-51.png"><img src="images/billiard-android/Screenshot_2018-09-30-10-18-58.png"><img src="images/billiard-android/Screenshot_2018-09-30-10-19-24.png"><img src="images/billiard-android/Screenshot_2018-09-30-10-19-41.png"><img src="images/billiard-android/Screenshot_2018-09-30-10-19-52.png"><img src="images/billiard-android/Screenshot_2018-09-30-10-20-17.png"><img src="images/billiard-android/Screenshot_2018-09-30-10-22-12.png"><img src="images/billiard-android/Screenshot_2018-10-08-22-52-14.png"><img src="images/billiard-android/Screenshot_2018-10-08-22-52-40.png"><img src="images/billiard-android/Screenshot_2018-10-08-22-53-40.png"><img src="images/billiard-android/Screenshot_2018-12-15-22-54-21.png"><img src="images/billiard-android/Screenshot_2018-12-15-23-07-40.png">
 
@@ -99,7 +127,7 @@
 
 var width = getWidth();
 var cols = Math.round(width/350);
-
+/*
 $('#photos').css({
   '-moz-column-count': cols,
   '-webkit-column-count': cols,
@@ -123,7 +151,7 @@ $('#photosWide').css({
   '-moz-column-count': cols,
   '-webkit-column-count': cols,
   'column-count': cols
-});
+});*/
 
 		</script>
     </body>
