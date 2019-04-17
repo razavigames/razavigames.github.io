@@ -85,7 +85,7 @@
 }
 
 var width = getWidth();
-var cols = Math.ceil(width/350);
+var cols = Math.round(width/350);
 
 $('#photos').css({
   '-moz-column-count': cols,
@@ -94,7 +94,7 @@ $('#photos').css({
 });
 
 
-cols = Math.ceil(width/600);
+cols = Math.round(width/600);
 
 $('#photosWide').css({
   '-moz-column-count': cols,
