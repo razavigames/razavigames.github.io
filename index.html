@@ -8,131 +8,98 @@
         <title>Razavi Games Showcase only</title>
 
         <link href='https://fonts.googleapis.com/css?family=Scada:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="css/jquery.galereya.css">
-       <link rel="stylesheet" href="css/demo.css">
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
 	   
         <!--[if lt IE 9]>
         <link rel="stylesheet" href="css/jquery.galereya.ie.css">
         <![endif]-->
         <style>
-            .galereya.ex1 .galereya-top { display: none; }
+		
+#photos {
+   /* Prevent vertical gaps */
+   line-height: 0;
+   
+   -webkit-column-count: 5;
+   -webkit-column-gap:   0px;
+   -moz-column-count:    5;
+   -moz-column-gap:      0px;
+   column-count:         5;
+   column-gap:           4px;
+}
 
-            .galereya.ex1 .galereya-grid { top: 0; }
+#photos img,
+#photosWide img {
+  /* Just in case there are inline attributes */
+  width: 100% !important;
+  height: auto !important;
+  margin:2px;
+  
+}
 
-            .galereya.ex1 .galereya-cell {
-                width: 80px;
-                padding: 0;
 
-                -webkit-transition: -webkit-transform 0.2s ease-out;
-                -moz-transition: -moz-transform 0.2s ease-out;
-                -o-transition: -o-transform 0.2s ease-out;
-                transition: transform 0.2s ease-out;
-            }
-            .galereya.ex1 .galereya-cell:hover {
-                -webkit-transform: scale(1.1);
-                -moz-transform: scale(1.1);
-                -ms-transform: scale(1.1);
-                -o-transform: scale(1.1);
-                transform: scale(1.1);
-                -webkit-box-shadow: 0 0 2em #000;
-                box-shadow: 0 0 2em #000;
-            }
-            .galereya.ex1 .galereya-cell-img { width: 80px; }
+#photosWide {
+   /* Prevent vertical gaps */
+   line-height: 0;
+   
+   -webkit-column-count: 5;
+   -webkit-column-gap:   0px;
+   -moz-column-count:    5;
+   -moz-column-gap:      0px;
+   column-count:         5;
+   column-gap:           0px;
+}
 
-            .galereya.ex1 .galereya-cell-desc { display: none; }
-
-            .galereya.ex1 .galereya-cell-overlay {
-                -webkit-box-shadow: none;
-                box-shadow: none;
-            }
-
-            .galereya-slider.ex1 {
-                opacity: 0;
-
-                -webkit-transform: translateX(0);
-                -moz-transform: translateX(0);
-                -ms-transform: translate(0);
-                -o-transform: translateX(0);
-                transform: translateX(0);
-                -webkit-transition: opacity .5s ease-out;
-                -moz-transition: opacity .5s ease-out;
-                transition: opacity .5s ease-out;
-                -o-transition: none;
-            }
-
-            .galereya-slider.ex1.opened { opacity: 100; }
-
-            .galereya-slider.ex1 .galereya-slider-desc {
-                font-size: 12pt;
-
-                top: 0;
-                bottom: auto;
-                left: 0;
-
-                width: 200px;
-            }
-
-            .galereya-slider.ex1 .galereya-slider-play,
-            .galereya-slider.ex1 .galereya-slider-close {
-                top: auto;
-                bottom: 0;
-            }
-
-            .galereya-slider.ex1 .galereya-slider-slide {
-                opacity: 100;
-
-                -webkit-transition: opacity .5s ease-out;
-                -moz-transition: opacity .5s ease-out;
-                transition: opacity .5s ease-out;
-                -o-transition: none;
-
-                background: #000 url(img/wild_oliva.png);
-            }
-
-            .galereya-slider.ex1 .galereya-slide-img {
-                -webkit-box-shadow: 0 0 1em #000;
-                box-shadow: 0 0 2em #000;
-            }
-
-            .galereya-slider.ex1 .galereya-slider-slide.next {
-                opacity: 0;
-
-                -webkit-transform: translateX(0);
-                -moz-transform: translateX(0);
-                -ms-transform: translate(0);
-                -o-transform: translateX(0);
-                transform: translateX(0);
-            }
-            .galereya-slider-slide.current {}
-            .galereya-slider-slide.prev {}
-
-            @media only screen and (min-width: 601px) {
-                .galereya.ex1 .galereya-cell { width: 200px; }
-
-                .galereya.ex1 .galereya-cell-img { width: 200px; }
-            }
         </style>
 		
     </head>
     <body>
-        <div id="ex1"></div>
+        <div id="photos">
+			
+<img src="images/tall/alilg-image-editor.jpg"><img src="images/tall/C39Q8P9WQAAQXhh.jpg"><img src="images/tall/C39QsdUWYAEaEeF.jpg"><img src="images/tall/C39QxI9WIAAm0ue.jpg"><img src="images/tall/C39RCGFWYAAR7mx.jpg"><img src="images/tall/C39RHZtWMAA196B.jpg"><img src="images/tall/ir.instanegar.android10.jpg"><img src="images/tall/ir.instanegar.android11.jpg"><img src="images/tall/ir.instanegar.android13.jpg"><img src="images/tall/ir.instanegar.android6.jpg"><img src="images/tall/ir.instanegar.android7.jpg"><img src="images/tall/photo_2019-01-06_22-55-12.jpg"><img src="images/tall/Screenshot_2018-12-15-00-54-18.png"><img src="images/tall/Screenshot_2018-12-23-16-07-36.png"><img src="images/tall/Screenshot_2019-01-01-19-19-49.png"><img src="images/tall/Screenshot_2019-01-01-20-11-26.png"><img src="images/tall/Screenshot_2019-01-18-19-55-28.png"><img src="images/tall/Screenshot_2019-01-22-22-01-51.png"><img src="images/tall/Screenshot_2019-01-22-22-55-27.png"><img src="images/tall/Screenshot_2019-03-27-00-02-38.png"><img src="images/tall/Screenshot_2019-04-02-19-20-03.png"><img src="images/tall/Screenshot_2019-04-02-19-20-12.png"><img src="images/tall/Screenshot_2019-04-02-19-20-24.png"><img src="images/tall/Screenshot_2019-04-02-19-20-34.png"><img src="images/tall/Screenshot_2019-04-02-19-20-46.png"><img src="images/tall/Screenshot_2019-04-02-19-20-52.png"><img src="images/tall/Screenshot_2019-04-02-19-21-06.png"><img src="images/tall/shatranj_b30d_tablet.jpg"><img src="images/tall/xsaefed.png">
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
-        <script src="js/jquery.galereya.min.js"></script>
-        <script>
-            $(function() {
-                $('#ex1').galereya({
-                    wave: false,
-                    modifier: 'ex1',
-                    spacing: 5,
-                    load: function(next) {
-                        $.getJSON('images.json', function(data) {
-                            next(data);
-                        });
-                    }
-                });
-            });
-        </script>
+		
+		</div>
+		
+		
+<div id="photosWide">
+			
+<img src="images/wide/1.jpg"><img src="images/wide/12507652_1556448298005586_37623579201110349_n.png"><img src="images/wide/1391110632_medium.jpg"><img src="images/wide/1391110727_medium.jpg"><img src="images/wide/1397993357_1.jpg"><img src="images/wide/14.jpg"><img src="images/wide/2.jpg"><img src="images/wide/3.jpg"><img src="images/wide/3D-Car-2007-a.jpg"><img src="images/wide/3D-Police-Chase-Race.jpg"><img src="images/wide/3d-street-race-a.jpg"><img src="images/wide/44.png"><img src="images/wide/5317b05088ba1.jpg"><img src="images/wide/569bac73e542d_Screenshotfrom2016-01-10145250.png.be6b0764dc6518b8b9bb6b95084cf556.png"><img src="images/wide/6.jpg"><img src="images/wide/7.jpg"><img src="images/wide/75918.jpg"><img src="images/wide/7ExOkN1JX6-FIyL_g5.jpg"><img src="images/wide/86786678687686768960978.jpg"><img src="images/wide/86786678687686768960978b.jpg"><img src="images/wide/9.jpg"><img src="images/wide/ag9Zqw0r6Y-6D7R_NARD - Copy.jpg"><img src="images/wide/ag9Zqw0r6Y-6D7R_NARD.jpg"><img src="images/wide/AJEw6mAK2p-OeHD_screen3.jpg"><img src="images/wide/alichess_fantasy_screen.jpg"><img src="images/wide/alilg-free-ajax-php-script.jpg"><img src="images/wide/BILLIARD_SOLO.png"><img src="images/wide/CO5RiSloXu-mZU0_PUZZLE_SAZ_2.jpg"><img src="images/wide/Etz5dseCf1-E6Hh_screen2.jpg"><img src="images/wide/free-online-checkers-a.jpg"><img src="images/wide/free-online-chess-vs-computer.jpg"><img src="images/wide/free-online-parcheesi-pachisi-ludo.jpg"><img src="images/wide/NEW_CHESS2.png"><img src="images/wide/QG5oAuZk0d-f4al_g6.jpg"><img src="images/wide/ROOM_RANGI.png"><img src="images/wide/s1.jpg"><img src="images/wide/salon_11.jpg"><img src="images/wide/screen3.jpg"><img src="images/wide/Screenshot_2018-09-30-10-18-06.png"><img src="images/wide/Screenshot_2018-09-30-10-18-17.png"><img src="images/wide/Screenshot_2018-09-30-10-18-45.png"><img src="images/wide/Screenshot_2018-09-30-10-18-51.png"><img src="images/wide/Screenshot_2018-09-30-10-18-58.png"><img src="images/wide/Screenshot_2018-09-30-10-19-24.png"><img src="images/wide/Screenshot_2018-09-30-10-19-41.png"><img src="images/wide/Screenshot_2018-09-30-10-19-52.png"><img src="images/wide/Screenshot_2018-09-30-10-20-17.png"><img src="images/wide/Screenshot_2018-09-30-10-22-12.png"><img src="images/wide/Screenshot_2018-10-08-22-52-14.png"><img src="images/wide/Screenshot_2018-10-08-22-52-40.png"><img src="images/wide/Screenshot_2018-10-08-22-53-40.png"><img src="images/wide/Screenshot_2018-12-15-22-54-21.png"><img src="images/wide/Screenshot_2018-12-15-23-07-40.png"><img src="images/wide/ss.png"><img src="images/wide/Sss.png"><img src="images/wide/webrtc-game-6.jpg"><img src="images/wide/WOhf984ny2-3G7w_ss11.jpg"><img src="images/wide/x1.jpg"><img src="images/wide/x2.png.7c90b6409e3389abcdeee12001d11cf3.png"><img src="images/wide/zhC0xHeFo7-uR9I_g4.jpg">
+		
+		
+		</div>	
+		
+
+		<script>
+		function getWidth() {
+  return Math.max(
+    document.body.scrollWidth,
+    document.documentElement.scrollWidth,
+    document.body.offsetWidth,
+    document.documentElement.offsetWidth,
+    document.documentElement.clientWidth
+  );
+}
+
+var width = getWidth();
+var cols = Math.floor(width/300);
+
+$('#photos').css({
+  '-moz-column-count': cols,
+  '-webkit-column-count': cols,
+  'column-count': cols
+});
+
+
+cols = Math.floor(width/500);
+
+$('#photosWide').css({
+  '-moz-column-count': cols,
+  '-webkit-column-count': cols,
+  'column-count': cols
+});
+
+		</script>
     </body>
 </html>

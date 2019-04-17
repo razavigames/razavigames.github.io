@@ -1,3 +1,4 @@
+<html>
 <?php
 
 $images = array();
@@ -41,27 +42,65 @@ function makeThumbnails($updir, $img, $id,$MaxWe=100,$MaxHe=150){
         $new_image = imagecreatetruecolor($newWidth, $newHeight);
         imagecopyresized($new_image, $old_image, 0, 0, 0, 0, $newWidth, $newHeight, $width, $height);
 
-       $imgt($new_image, $updir."/../thumbs/".$id."_t.jpg");
+       $imgt($new_image, "C:/xampp/htdocs/razavigames.github.io/thumbs/".$id."_t.jpg");
         return;    
     }
 }
 
- $id = 1;
-if ($handle = opendir('./images')) {
+$id = 1;
+if ($handle = opendir('./images/tall')) {
 
     while (false !== ($entry = readdir($handle))) {
 
         if ($entry != "." && $entry != "..") {
 
             //echo "$entry\n";
-			//makeThumbnails("C:/xampp/htdocs/imagesss/images", "C:/xampp/htdocs/imagesss/images/".$entry, $id, $MaxWe=400,$MaxHe=400);
-			array_push($images, array("lowsrc"=>"images/".$entry) );
+			makeThumbnails("C:/xampp/htdocs/razavigames.github.io/images/tall", "C:/xampp/htdocs/razavigames.github.io/images/tall/".$entry, $id, $MaxWe=400,$MaxHe=400);
+			array_push($images, array("lowsrc"=>"thumbs/".$id."_t.jpg", "fullsrc"=>"images/tall/".$entry) );
 			 $id++;
+			 
+			// echo '<img src="thumbs/'.$id.'_t.jpg">';
+			 echo '<img src="images/tall/'.$entry.'">';
         }
     }
 
     closedir($handle);
 }
 
+
+echo "
+
+
+";
+
+$wideImages = array();
+
+if ($handle = opendir('./images/wide')) {
+
+    while (false !== ($entry = readdir($handle))) {
+
+        if ($entry != "." && $entry != "..") {
+
+            //echo "$entry\n";
+			makeThumbnails("C:/xampp/htdocs/razavigames.github.io/images/wide", "C:/xampp/htdocs/razavigames.github.io/images/wide/".$entry, $id, $MaxWe=400,$MaxHe=400);
+			array_push($wideImages, array("lowsrc"=>"thumbs/".$id."_t.jpg", "fullsrc"=>"images/wide/".$entry) );
+			 $id++;
+			 //echo '<img src="thumbs/'.$id.'_t.jpg">';
+			 echo '<img src="images/wide/'.$entry.'">';
+        }
+    }
+
+    closedir($handle);
+}
+
+
+exit;
 $images = array_reverse($images);
 echo json_encode($images);
+
+echo "<hr>";
+
+echo json_encode($wideImages);
+
+?>
+</html>
