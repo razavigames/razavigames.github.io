@@ -1,4 +1,4 @@
-<html>
+
 <?php
 
 $images = array();
@@ -47,6 +47,11 @@ function makeThumbnails($updir, $img, $id,$MaxWe=100,$MaxHe=150){
     }
 }
 
+
+
+
+
+echo '<div id="photos">';
 $id = 1;
 if ($handle = opendir('./images/tall')) {
 
@@ -55,12 +60,12 @@ if ($handle = opendir('./images/tall')) {
         if ($entry != "." && $entry != "..") {
 
             //echo "$entry\n";
-			//makeThumbnails("C:/xampp/htdocs/razavigames.github.io/images/tall", "C:/xampp/htdocs/razavigames.github.io/images/tall/".$entry, $id, $MaxWe=400,$MaxHe=400);
+			makeThumbnails("C:/xampp/htdocs/razavigames.github.io/images/tall", "C:/xampp/htdocs/razavigames.github.io/images/tall/".$entry, $id, $MaxWe=800,$MaxHe=800);
 			array_push($images, array("lowsrc"=>"thumbs/".$id."_t.jpg", "fullsrc"=>"images/tall/".$entry) );
-			 $id++;
 			 
-			// echo '<img src="thumbs/'.$id.'_t.jpg">';
-			 echo '<img src="images/tall/'.$entry.'">';
+			echo '<img src="thumbs/'.$id.'_t.jpg">';
+			 //echo '<img src="images/tall/'.$entry.'">';
+			 $id++;
         }
     }
 
@@ -68,10 +73,9 @@ if ($handle = opendir('./images/tall')) {
 }
 
 echo "
-
-
+</div>
 ";
-
+echo '<div id="photosWide">';
 $wideImages = array();
 
 if ($handle = opendir('./images/billiard-android')) {
@@ -81,11 +85,11 @@ if ($handle = opendir('./images/billiard-android')) {
         if ($entry != "." && $entry != "..") {
 
             //echo "$entry\n";
-			//makeThumbnails("C:/xampp/htdocs/razavigames.github.io/images/wide", "C:/xampp/htdocs/razavigames.github.io/images/wide/".$entry, $id, $MaxWe=400,$MaxHe=400);
-			array_push($wideImages, array("lowsrc"=>"thumbs/".$id."_t.jpg", "fullsrc"=>"images/wide/".$entry) );
+			makeThumbnails("C:/xampp/htdocs/razavigames.github.io/images/billiard-android", "C:/xampp/htdocs/razavigames.github.io/images/billiard-android/".$entry, $id, $MaxWe=800,$MaxHe=800);
+			array_push($wideImages, array("lowsrc"=>"thumbs/".$id."_t.jpg", "fullsrc"=>"images/billiard-android/".$entry) );
+			 echo '<img src="thumbs/'.$id.'_t.jpg">';
+			 //echo '<img src="images/billiard-android/'.$entry.'">';
 			 $id++;
-			 //echo '<img src="thumbs/'.$id.'_t.jpg">';
-			 echo '<img src="images/billiard-android/'.$entry.'">';
         }
     }
 
@@ -93,10 +97,9 @@ if ($handle = opendir('./images/billiard-android')) {
 }
 
 echo "
-
-
+</div>
 ";
-
+echo '<div id="photosWide">';
 $wideImages = array();
 
 if ($handle = opendir('./images/wide')) {
@@ -106,17 +109,19 @@ if ($handle = opendir('./images/wide')) {
         if ($entry != "." && $entry != "..") {
 
             //echo "$entry\n";
-			//makeThumbnails("C:/xampp/htdocs/razavigames.github.io/images/wide", "C:/xampp/htdocs/razavigames.github.io/images/wide/".$entry, $id, $MaxWe=400,$MaxHe=400);
+			makeThumbnails("C:/xampp/htdocs/razavigames.github.io/images/wide", "C:/xampp/htdocs/razavigames.github.io/images/wide/".$entry, $id, $MaxWe=800,$MaxHe=800);
 			array_push($wideImages, array("lowsrc"=>"thumbs/".$id."_t.jpg", "fullsrc"=>"images/wide/".$entry) );
+			 echo '<img src="thumbs/'.$id.'_t.jpg">';
+			 //echo '<img src="images/wide/'.$entry.'">';
 			 $id++;
-			 //echo '<img src="thumbs/'.$id.'_t.jpg">';
-			 echo '<img src="images/wide/'.$entry.'">';
         }
     }
 
     closedir($handle);
 }
-
+echo "
+</div>
+";
 
 exit;
 $images = array_reverse($images);
