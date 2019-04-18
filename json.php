@@ -63,7 +63,7 @@ if ($handle = opendir('./images/tall')) {
 			makeThumbnails("C:/xampp/htdocs/razavigames.github.io/images/tall", "C:/xampp/htdocs/razavigames.github.io/images/tall/".$entry, $id, $MaxWe=800,$MaxHe=800);
 			array_push($images, array("lowsrc"=>"thumbs/".$id."_t.jpg", "fullsrc"=>"images/tall/".$entry) );
 			 
-			echo '<img src="thumbs/'.$id.'_t.jpg">';
+			echo '<a href="images/tall/'.$entry.'" target="_blank"><img src="thumbs/'.$id.'_t.jpg" border="0"></a>';
 			 //echo '<img src="images/tall/'.$entry.'">';
 			 $id++;
         }
@@ -87,7 +87,7 @@ if ($handle = opendir('./images/billiard-android')) {
             //echo "$entry\n";
 			makeThumbnails("C:/xampp/htdocs/razavigames.github.io/images/billiard-android", "C:/xampp/htdocs/razavigames.github.io/images/billiard-android/".$entry, $id, $MaxWe=800,$MaxHe=800);
 			array_push($wideImages, array("lowsrc"=>"thumbs/".$id."_t.jpg", "fullsrc"=>"images/billiard-android/".$entry) );
-			 echo '<img src="thumbs/'.$id.'_t.jpg">';
+			echo '<a href="images/billiard-android/'.$entry.'" target="_blank"><img src="thumbs/'.$id.'_t.jpg" border="0"></a>';
 			 //echo '<img src="images/billiard-android/'.$entry.'">';
 			 $id++;
         }
@@ -111,7 +111,7 @@ if ($handle = opendir('./images/wide')) {
             //echo "$entry\n";
 			makeThumbnails("C:/xampp/htdocs/razavigames.github.io/images/wide", "C:/xampp/htdocs/razavigames.github.io/images/wide/".$entry, $id, $MaxWe=800,$MaxHe=800);
 			array_push($wideImages, array("lowsrc"=>"thumbs/".$id."_t.jpg", "fullsrc"=>"images/wide/".$entry) );
-			 echo '<img src="thumbs/'.$id.'_t.jpg">';
+			echo '<a href="images/wide/'.$entry.'" target="_blank"><img src="thumbs/'.$id.'_t.jpg" border="0"></a>';
 			 //echo '<img src="images/wide/'.$entry.'">';
 			 $id++;
         }
